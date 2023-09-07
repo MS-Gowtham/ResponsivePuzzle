@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: antiquewhite;
+}
+
+.PuzzleHeadingDiv{
+    text-align: center;
+    margin-top: 2vh;
+}
+
+.PuzzleHeading{
+    font-size: 4vh;
+    font-weight: bold;
+}
+
+.Board{
+    height: 360px;
+    width: 360px;
+    margin: 8vh  auto 0;
+    background-color: white;
+}
+
+.Turns_solve{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 4vh;
+    margin-top: 2vh;
+    position: relative;
+}
+
+.Turns_solve i{
+    font-size: 5vh;
+    margin-bottom: 2vh;
+}
+
+.fa-solid{
+    position: absolute;
+    top:0.1vh
+}
+
+.vanish{
+    visibility: hidden;
+}
+
+
+
+
+.difficulty{
+    display: flex;
+    justify-content: center;
+    margin-top: 4vh;
+}
+
+.difficulty p{
+    font-size: 4vh;
+    margin-left: 6vw;
+    margin-right: 6vw;
+}
+
+.difficulty p:hover{
+    text-decoration: underline;
+}
+
+@media screen and (max-width:560px){
+    .Board{
+        height: 300px;
+        width: 300px
+    }
+}
+

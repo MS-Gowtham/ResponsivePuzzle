@@ -6,27 +6,34 @@
     <title>Puzzle</title>
     <link rel="stylesheet" href="PuzzleResponsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.min.css" rel="stylesheet">
 </head>
 <body>
     <div class="PuzzleHeadingDiv">
         <p class="PuzzleHeading">Puzzle</p>
     </div>
 
-    <div class="Board">
+    <div class="Board" id="Board">
 
+    </div>
+
+    <div class="Fullview">
+        <i class="fa-solid fa-eye" id="Eye" onmouseover="showFullImage()" onmouseleave="unsolve()"></i>
+        <i class="fa-regular fa-lightbulb solve"  id="solve" onclick="solve()"></i>
+        <i class="fa-solid fa-lightbulb unsolve" id="unsolve" onclick="unsolve()"></i>
     </div>
 
     <div class="Turns_solve">
-        <i class="fa-regular fa-lightbulb"></i>
-        <i class="fa-solid fa-lightbulb"></i>
-        <p>Turns <span>0</span></p>
+        <p>Turns <span id="turns">0</span></p>
     </div>
 
     <div class="difficulty">
-        <p>Easy</p>
-        <p>Medium</p>
-        <p>Hard</p>
+        <p onclick="Easy()" id="EasyButton">Easy</p>
+        <p onclick="Medium()" id="MediumButton">Medium</p>
+        <p onclick="Hard()" id="HardButton">Hard</p>
     </div>
-    
+    <script src="PuzzleResponsive.js"></script>
+    <script src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.all.min.js"></script>
 </body>
 </html>

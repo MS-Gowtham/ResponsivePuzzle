@@ -4,7 +4,9 @@
 }
 
 body{
-    background-color: antiquewhite;
+    background: linear-gradient(to top, #dfe9f3 0%, white 100%);
+    height: 100vh;
+    overflow: hidden;
 }
 
 .PuzzleHeadingDiv{
@@ -13,15 +15,37 @@ body{
 }
 
 .PuzzleHeading{
-    font-size: 4vh;
+    font-size: 5vh;
     font-weight: bold;
 }
 
 .Board{
-    height: 360px;
-    width: 360px;
-    margin: 8vh  auto 0;
+    height: 358px;
+    width: 358px;
+    margin: 6vh  auto 0;
     background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+}
+.Fullimage{
+    height: 358px;
+    width: 358px;
+}
+
+.EasyBoardHeigthWidth{
+    width: 118px;
+    height: 118px;
+    border: 0.5px solid white;
+}
+.MediumBoardHeigthWidth{
+    width: 88px;
+    height: 88px;
+    border: 0.5px solid white;
+}
+.HardBoardHeigthWidth{
+    width: 70px;
+    height: 70px;
+    border: 0.5px solid white;
 }
 
 .Turns_solve{
@@ -31,24 +55,40 @@ body{
     flex-direction: column;
     font-size: 4vh;
     margin-top: 2vh;
+}
+
+.Fullview i{
+    font-size: 22px;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
     position: relative;
+    margin-left: 4vw;
+    margin-right: 4vw;
 }
 
-.Turns_solve i{
-    font-size: 5vh;
-    margin-bottom: 2vh;
-}
-
-.fa-solid{
+.solve{
     position: absolute;
-    top:0.1vh
+    left: 9.5vw;
+}
+.unsolve{
+    position: absolute;
+    right: 0.5vw;
+}
+.fa-eye{
+    position: static;
 }
 
+.Fullview{
+    position: relative;
+    text-align: center;
+    margin-top: 2vh;
+}
 .vanish{
     visibility: hidden;
 }
-
-
+.underline{
+    text-decoration: underline;
+}
 
 
 .difficulty{
@@ -69,8 +109,31 @@ body{
 
 @media screen and (max-width:560px){
     .Board{
-        height: 300px;
-        width: 300px
+        height: 298px;
+        width: 298px
+    }
+    .EasyBoardHeigthWidth{
+        width: 98px;
+        height: 98px;
+    }
+    .MediumBoardHeigthWidth{
+        width: 73px;
+        height: 73px;
+    }
+    .HardBoardHeigthWidth{
+        width: 58px;
+        height: 58px;
+    }
+    .Fullimage{
+        height: 298px;
+        width: 298px;
     }
 }
 
+@media screen and (max-width:750px)
+{
+    .unsolve{
+        position: absolute;
+        right: 2vw;
+    }
+}
